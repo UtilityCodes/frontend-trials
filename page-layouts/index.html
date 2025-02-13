@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Dashboard</h1>
+        </header>
+
+        <section class="form-section">
+            <h2>Registration Form</h2>
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name"> 
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password">
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>User Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Admin</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Doe</td>
+                        <td>jane@example.com</td>
+                        <td>User</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Alice Johnson</td>
+                        <td>alice@example.com</td>
+                        <td>Editor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="graph-section">
+            <h2>Monthly Sales</h2>
+            <div class="graph">
+                <div class="bar" style="height: 80%;">Jan</div>
+                <div class="bar" style="height: 60%;">Feb</div>
+                <div class="bar" style="height: 90%;">Mar</div>
+                <div class="bar" style="height: 50%;">Apr</div>
+                <div class="bar" style="height: 70%;">May</div>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <h2>Statistics</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>1,234</p>
+                </div>
+
+                <div class="card">
+                    <h3>Active Projects</h3>
+                    <p>45</p>
+                </div>
+
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>$12,345</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
