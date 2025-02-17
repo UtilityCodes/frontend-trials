@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Select & Add</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-container {
+            margin-top: 20px;
+            display: none;
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 300px;
+            border-radius: 5px;
+        }
+        button {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label for="customer">Select Customer:</label>
+    <select id="customer">
+        <option value="John Doe">John Doe</option>
+        <option value="Jane Smith">Jane Smith</option>
+        <option value="Mike Johnson">Mike Johnson</option>
+    </select>
+    <button id="addCustomer">+</button>
+
+    <div class="form-container" id="customerForm">
+        <h3>Register New Customer</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email"><br><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter phone"><br><br>
+        <button onclick="submitCustomer()">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById("addCustomer").addEventListener("click", function() {
+            let form = document.getElementById("customerForm");
+            form.style.display = form.style.display === "none" ? "block" : "none";
+        });
+
+        function submitCustomer() {
+            let name = document.getElementById("name").value;
+            if (name) {
+                let select = document.getElementById("customer");
+                let option = document.createElement("option");
+                option.value = name;
+                option.textContent = name;
+                select.appendChild(option);
+                select.value = name;
+                document.getElementById("customerForm").style.display = "none";
+            } else {
+                alert("Please enter a name");
+            }
+        }
+    </script>
+</body>
+</html>
